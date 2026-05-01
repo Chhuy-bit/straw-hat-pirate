@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+
+html {
+  scroll-behavior: smooth;
+}
+@theme {
+  /* Fonts */
+  --font-zentry: "zentry", sans-serif;
+  --font-general: "general", sans-serif;
+  --font-circular-web: "circular-web", sans-serif;
+  --font-robert-medium: "robert-medium", sans-serif;
+  --font-robert-regular: "robert-regular", sans-serif;
+
+  /* Colors */
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
+  --color-blue-200: #010101;
+  --color-blue-300: #4fb7dd;
+
+  --color-violet-300: #5724ff;
+
+  --color-yellow-100: #83983f;
+  --color-yellow-300: #edff66;
+}
+@layer base {
+  @font-face {
+    font-family: "circular-web";
+    src: url("/fonts/circularweb-book.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "general";
+    src: url("/fonts/general.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "robert-medium";
+    src: url("/fonts/robert-medium.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "robert-regular";
+    src: url("/fonts/robert-regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "zentry";
+    src: url("/fonts/zentry-regular.woff2") format("woff2");
+  }
+  body {
+    @apply w-screen overflow-x-hidden bg-blue-50 font-general;
+  }
+}
+@utility nav-hover-btn {
+  @apply relative lg:ms-10 lg:text-xs uppercase text-white cursor-pointer md:text-[10px] md:ms-4;
+
+  &::after {
+    @apply absolute -bottom-0.5 left-0 h-0.5 w-full origin-bottom-right scale-x-0 bg-white transition-transform duration-300 ease-[cubic-bezier(0.65,0.05,0.36,1)];
+    content: "";
+  }
+
+  &:hover::after {
+    @apply origin-bottom-left scale-x-100;
+  }
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+@utility special-font {
+  & b {
+    font-family: "zentry";
+    font-feature-settings: "ss01" on;
+  }
+}
+@utility hero-heading {
+  @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+}
+@utility indicator-line {
+  @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+}
+@utility mask-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@utility absolute-center {
+  @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+@utility special-font {
+  & b {
+    font-family: "zentry";
+    font-feature-settings: "ss01" on;
+  }
+}
+@utility mask-clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@keyframes indicator-line-anim {
+  0%,
+  100% {
+    height: 4px;
+    transform: translateY(0);
+  }
+  50% {
+    height: 16px;
+    transform: translateY(-4px);
+  }
+}
+@utility about-image {
+  @apply absolute left-1/2 top-0 z-20 lg:h-[55vh] lg:w-80 origin-center -translate-x-1/2 overflow-hidden rounded-3xl h-[45vh] w-70 ;
+}
+@utility about-subtext {
+  @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web lg:text-xl text-sm md:max-w-158  ;
+}
+@utility animated-title {
+  @apply lg:text-6xl hero-heading special-font uppercase text-white sm:px-32 md:text-[2rem];
+}
+@utility animated-word {
+  @apply opacity-0 pointer-events-none;
+  transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+  transform-origin: 50% 50% -150px !important;
+  will-change: opacity, transform;
+}
+.mask-clip-path {
+  will-change: transform, width, height;
+}
+
+.indicator-line {
+  @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+}
+
+.indicator-line.active {
+  animation: indicator-line-anim 0.6s infinite ease-in-out;
+}
+.three-body {
+  --uib-size: 35px;
+  --uib-speed: 0.8s;
+  --uib-color: #5d3fd3;
+  @apply relative inline-block h-(--uib-size) w-(--uib-size);
+  animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+}
+
+.three-body__dot {
+  @apply absolute h-full w-[30%];
+
+  &::after {
+    content: "";
+    @apply absolute h-0 w-full pb-[100%] rounded-full bg-(--uib-color);
+  }
+
+  &:nth-child(1) {
+    @apply bottom-[5%] left-0 rotate-60 origin-[50%_85%];
+    &::after {
+      @apply bottom-0 left-0;
+      animation: wobble1 var(--uib-speed) infinite ease-in-out
+        calc(var(--uib-speed) * -0.3);
+    }
+  }
+
+  &:nth-child(2) {
+    @apply bottom-[5%] right-0 -rotate-60 origin-[50%_85%];
+    &::after {
+      @apply bottom-0 left-0;
+      animation: wobble1 var(--uib-speed) infinite ease-in-out
+        calc(var(--uib-speed) * -0.15);
+    }
+  }
+
+  &:nth-child(3) {
+    @apply -bottom-[5%] left-0 translate-x-[116.666%];
+    &::after {
+      @apply top-0 left-0;
+      animation: wobble2 var(--uib-speed) infinite ease-in-out;
+    }
+  }
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #000;
+}
+.loader::before {
+  box-shadow: -25px 0;
+  animation: l8-1 1s infinite linear;
+}
+.loader::after {
+  transform: rotate(0deg) translateX(25px);
+  animation: l8-2 1s infinite linear;
+}
+
+@keyframes l8-1 {
+    100%{transform: translateX(25px)}
+}
+@keyframes l8-2 {
+    100%{transform: rotate(-180deg) translateX(25px)}
+}
