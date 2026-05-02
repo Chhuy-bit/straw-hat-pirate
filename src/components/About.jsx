@@ -139,7 +139,7 @@ useGSAP(
         <div className="mask-clip-path about-image mx-auto lg:mb-10 md:mb-10 mb-5 overflow-hidden bg-blue-500">
           <video id='video'
             ref={videoRef}
-            src="./videos/about.mp4"
+            src="./videos/about.webm"
             className="absolute left-0 top-0 size-full object-cover"
             muted
             playsInline

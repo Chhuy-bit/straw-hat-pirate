@@ -72,7 +72,7 @@ function Bounty() {
         <div className="relative w-full">
        
             <h1 className="hero-heading text-6xl relative top-30 z-30 text-center font-bold bg-clip-text text-transparent" style={{
-                backgroundImage: `url('https://img.freepik.com/free-photo/beautiful-sea-landscape-with-water-nature_23-2151120353.webp?semt=ais_hybrid')`,
+                backgroundImage: `url('https://img.freepik.com/free-photo/beautiful-sea-landscape-with-water-nature_23-2151120353.jpg?semt=ais_hybrid')`,
                 webkitTextStroke: "1px black",
               }}>Most Wanted Outlaws Across <br /> The Grand Line</h1>
           <img
@@ -82,7 +82,7 @@ function Bounty() {
           />
           <img
             className="w-full h-80 object-cover rounded-lg mt-30"
-            src="https://img.freepik.com/free-photo/beautiful-sea-landscape-with-water-nature_23-2151120353.webp?semt=ais_hybrid"
+            src="https://img.freepik.com/free-photo/beautiful-sea-landscape-with-water-nature_23-2151120353.jpg?semt=ais_hybrid"
             alt="Sea Background"
           />
         </div>
