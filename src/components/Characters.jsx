@@ -34,7 +34,7 @@ function Characters() {
               character={{
                 id: 1,
                 name: "Luffy",
-                video: "videos/info-1.mp4",
+                video: "videos/info-1.webm",
               }}
               containerClass="h-100"
             />
@@ -47,7 +47,7 @@ function Characters() {
               character={{
                 id: 2,
                 name: "zoro",
-                video: "videos/info-2.mp4",
+                video: "videos/info-2.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -58,7 +58,7 @@ function Characters() {
               character={{
                 id: 3,
                 name: "nami",
-                video: "videos/info-3.mp4",
+                video: "videos/info-3.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -68,7 +68,7 @@ function Characters() {
               character={{
                 id: 4,
                 name: "Ussop",
-                video: "videos/info-4.mp4",
+                video: "videos/info-4.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -78,7 +78,7 @@ function Characters() {
               character={{
                 id: 5,
                 name: "sanji",
-                video: "videos/info-5.mp4",
+                video: "videos/info-5.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -90,7 +90,7 @@ function Characters() {
               character={{
                 id: 6,
                 name: "chhoper",
-                video: "videos/info-6.mp4",
+                video: "videos/info-6.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -100,7 +100,7 @@ function Characters() {
               character={{
                 id: 7,
                 name: "robin",
-                video: "videos/info-7.mp4",
+                video: "videos/info-7.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -110,7 +110,7 @@ function Characters() {
               character={{
                 id: 8,
                 name: "franky",
-                video: "videos/info-8.mp4",
+                video: "videos/info-8.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -120,7 +120,7 @@ function Characters() {
               character={{
                 id: 9,
                 name: "brook",
-                video: "videos/info-9.mp4",
+                video: "videos/info-9.webm",
               }}
               containerClass="h-100 !w-70"
             /></CharacterTile>
@@ -131,7 +131,7 @@ function Characters() {
               character={{
                 id: 10,
                 name: "jinbei",
-                video: "videos/info-10.mp4",
+                video: "videos/info-10.webm",
               }}
               containerClass="h-100 "
             /></CharacterTile>
